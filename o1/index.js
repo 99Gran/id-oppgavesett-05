@@ -1,5 +1,5 @@
-const inpPass = document.querySelector("#inpPass")
-const inpPassord = document.querySelector("#inpPassord")
+const inpPassord1 = document.querySelector("#inpPass")
+const inpPassord2 = document.querySelector("#inpPassord")
 const passordene = document.querySelector("#passordene")
 
 
