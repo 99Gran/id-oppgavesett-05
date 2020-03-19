@@ -1,0 +1,28 @@
+* {
+    margin:0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: thistle;
+}
+
+h1 {
+    font-size: 4rem;
+    color: slategray;
+    padding: 50px 0 0 50px;
+}
+
+h2, input {
+    margin: 2rem 0 0 3rem;
+}
+
+h2 {
+    color: rgb(126, 127, 129); 
+    font-weight: 700;
+}
+
+button {
+    margin: 2rem 0 0  3rem;
+}
