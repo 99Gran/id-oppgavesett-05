@@ -1,48 +1,28 @@
-const inpPassord1 = document.querySelector("#inpPass")
-const inpPassord2 = document.querySelector("#inpPassord")
-const passordene = document.querySelector("#passordene")
+const inpPassord1 = document.querySelector("#inpPassord1")
+const inpPassord2 = document.querySelector("#inpPassord2")
+const info = document.querySelector("#info")
 
 
-/*function visPassord() {
-    let tekst = ""
+function sjekkPassord () {
 
-    if(inPass === inPassord) 
-        console.log ("Riktig passord")
-    } 
-    else if() {
-        console.log ("Feil passord")
-    } 
-}
-
-    let tekst = ""
-
-    if (inpPass === inpPassord) {
-        console.log ("Riktig passord")
-    } 
-    else if (inpPass>inpPassord) {
-        console.log ("Feil passord")
-    } 
-    else () {
-
-    }
-
-
-    let tekst = ""
-
-    if ("${inpPass}" === "${inpPassord}") {
-        console.log ("Passordene er like")
-    } 
-    else if ("${inpPass}">"${inpPassord}") {
-        console.log ("Du må fylle inn begge passordene")
-    } 
-    else if ("${inpPass}"<"${inpPassord}") {
-        console.log ("Du må fylle inn begge passordene")
-    }*/
-
-    
-function visPassord() {
-    if(evt.target.id === "passordene") {
-        console.log("Fyll inn to like passord")
+    if(inpPassord2.value === "") {
+        info.innerText = "Fyll inn begge"
         return
     }
+    if(inpPassord1.value === "") {
+        info.innerText = "Gjenta passordet"
+        return
+    }
+
+
+    if (inpPassord1.value === inpPassord2.value) {
+        info.innerText = "Passordene er like";
+        console.log("Passordene er like")
+    } else {
+        info.innerText = "Passordene er ikke like"
+    }
+
 }
+
+inpPassord1.oninput = sjekkPassord;
+inpPassord2.oninput = sjekkPassord;

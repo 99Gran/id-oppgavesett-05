@@ -22,3 +22,12 @@ h2 {
     color: rgb(126, 127, 129); 
     font-weight: 700;
 }
+
+#info {
+    font-size: 1.3rem;
+    background-color: lightcyan;
+    text-align: center;
+    width: 400px;
+    height: 40px;
+    padding: 1rem 0 0 0;
+}

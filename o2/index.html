@@ -10,8 +10,13 @@
     <h1>O2 - Minibanken</h1>
     <h2>Lag et input-felt hvor du kan skrive inn et beløp. Legg inn en knapp også. Når du trykker på knappen skal beløpet du skriver inn settes inn på en konto. Etter at du har satt inn beløpet, skal du vise frem saldoen.</h2>
 
-        <input id="kroner" type="text" placeholder="Antall kroner">
+        <input id="kroner" type="number" placeholder="Antall kroner">
         <button id="btn">Ta ut penger</button>
+        <button id="add">Sett inn penger</button>
+
+        <div>
+            <h2 id="info">Du har nå 500kr på kontoen</h2>
+        </div>
     
     <script src="./index.js"></script>
 </body>
