@@ -3,42 +3,35 @@ const btn = document.querySelector("#btn")
 const info = document.querySelector("#info")
 const add = document.querySelector("#add")
 
+let penger = 500 
 
-function sjekkKonto() {
-    if (kroner.value === 500){
-        info.innerText = "Du har nå 500kr på kontoen";
+function sjekkKonto(evt) {
+
+    const knappeID = evt.target.id
+    const belop = Number(kroner.value)
+
+    if(knappeID === "add") {
+        console.log("Du klikket på add")
+        penger += belop
+        info.innerText = `Du har nå ${penger}kr på kontoen`
+        return
     }
 
-    if (kroner.value <= 500){
-        info.innerText = ("Du har nå 300kr på konto");
-        console.log(kroner<=500)
+    //penger = penger - belop
+    penger -= belop 
+
+
+    if(belop > penger) {
+        info.innerText = "Du har ikke nok penger"
+        return
     }
 
-    if (kroner.value >= 500){
-        info.innerText = ("Du har ikke dekning på kontoen");
-        console.log(kroner>=500)
-    }
+
+    info.innerText = `Du har nå ${penger}kr på kontoen`
+
 }
 
-kroner.oninput = sjekkKonto;
-
-/*function sjekkSaldo () {
-
-    if(inpPassord2.value === "") {
-        info.innerText = "Fyll inn begge"
-        return
-    }
-    if(inpPassord1.value === "") {
-        info.innerText = "Gjenta passordet"
-        return
-    }
 
 
-    if (inpPassord1.value === inpPassord2.value) {
-        info.innerText = "Passordene er like";
-        console.log("Passordene er like")
-    } else {
-        info.innerText = "Passordene er ikke like"
-    }
-
-}*/
+btn.onclick = sjekkKonto;
+add.onclick = sjekkKonto;
